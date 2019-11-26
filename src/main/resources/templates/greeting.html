@@ -2,10 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<!--/*@thymesVar id="name" type=""*/-->
-<p th:text="'Hello, ' + ${name} + '!'" ></p>
+<p th:text="'Hello, ' + ${name} + '!'"></p>
+<form action="/process_data" method="get">
+    id: <input type="text" name="id"><br>
+    poi: <input type="text" name="poi"><br>
+    when: <input type="text" name="when"><br>
+    timeSpecified: <input type="text" name="timeSpecified"><br>
+    title: <input type="text" name="title"><br>
+    shortDesc: <input type="text" name="shortDesc"><br>
+    url: <input type="text" name="url"><br>
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>
